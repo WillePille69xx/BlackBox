@@ -20,8 +20,8 @@ body {
     font-weight: 500;
 
     border-bottom: 2px solid gray;
-    
-    padding-inline: 1.6rem;
+
+    padding:1rem;
 }
 
 .site-head a {
@@ -39,4 +39,8 @@ body {
     list-style: none;
     display: flex;
     gap: 1rem;
+
+
+    padding:0;
+    margin:0;
 }
