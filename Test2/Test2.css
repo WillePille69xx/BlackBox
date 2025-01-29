@@ -1,0 +1,202 @@
+/* Reset default styles */
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Body styles */
+body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic and sleek */
+    background-color: #1e1e1e; /* Dark theme for mystery */
+    color: #f1f1f1; /* Light text for readability */
+    line-height: 1.6;
+}
+
+/* Navigation bar styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(17, 17, 17, 0.8); /* Semi-transparent */
+    padding: 15px 0;
+    transition: background 0.3s ease-in-out;
+    backdrop-filter: blur(5px);
+}
+
+nav.scrolled {
+    background: rgba(17, 17, 17, 1); /* Fully opaque when scrolling */
+}
+
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #aaa;
+    font-size: 1.2rem;
+    transition: all 0.3s ease-in-out;
+    position: relative;
+}
+
+nav ul li a:hover {
+    color: #f1c40f;
+    transform: scale(1.1);
+}
+
+
+/* Hero Section */
+img {
+    max-width: 100%; /* Responsive images */
+}
+
+.hero {
+    height: 80vh;
+    background-image: url('Hero-img.jpg'); 
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    position: relative;
+}
+
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.5); /* Dark overlay for better text visibility */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero h1 {
+    font-size: 5rem;
+    text-transform: uppercase;
+    color: #f1f1f1;
+    text-shadow: 0 0 20px rgba(241, 196, 15, 0.8);
+}
+
+
+
+.big-word {
+    font-size: 4rem; /* Larger size for emphasis */
+    font-weight: bold;
+    letter-spacing: 6px; /* More spacing for big words */
+    color: #f1c40f; /* Golden color to stand out */
+}
+ 
+.small-word {
+    font-size: 2rem; /* Larger size for emphasis */
+    font-weight: bold;
+    letter-spacing: 6px; /* More spacing for big words */
+    color: #f1c40f; /* Golden color to stand out */
+    line-height: 1px;
+}
+
+/* effect for a glowing text */
+.hero h1 span {
+    text-shadow: 0 0 8px rgba(241, 196, 15, 0.8); /* Glowing effect on big words */
+}
+
+.cta-button {
+    display: inline-block;
+    margin-top: 20px;
+    padding: 12px 24px;
+    background: #f1c40f;
+    color: #111;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-radius: 8px;
+    transition: all 0.3s ease-in-out;
+    text-decoration: none;
+}
+
+.cta-button:hover {
+    background: #d4ac0d;
+    transform: scale(1.1);
+}
+
+
+/* Card Styles */
+.card { 
+    background-color: #222;
+    border: 2px solid #444;
+    border-radius: 8px;
+    padding: 20px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(241, 196, 15, 0.5);
+    border-color: #f1c40f;
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: -100%;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(241, 196, 15, 0.2);
+    transition: top 0.3s ease-in-out;
+}
+
+.card:hover::before {
+    top: 0;
+}
+
+/* Main content area styles */
+.main-content { 
+    display: flex; /* Arrange cards in a row */
+    flex-wrap: wrap; /* Allow cards to wrap to next line */
+    justify-content: space-between; /* Evenly distribute cards */
+    margin-top: 40px; /* Space between hero and cards */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px 0;
+    background: #111;
+    color: #f1f1f1;
+    position: relative;
+    overflow: hidden;
+}
+
+footer::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: -100%;
+    width: 100%;
+    height: 4px;
+    background: #f1c40f;
+    animation: slideLine 4s linear infinite;
+}
+
+@keyframes slideLine {
+    from { left: -100%; }
+    to { left: 100%; }
+}
