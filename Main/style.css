@@ -1,0 +1,137 @@
+/* Reset default styles */
+* {
+    margin: 0; 
+    padding: 0; 
+    box-sizing: border-box; 
+}
+
+/* Body styles */
+body {
+    font-family: 'Orbitron', sans-serif; /* Futuristic and sleek */
+    background-color: #1e1e1e; /* Dark theme for mystery */
+    color: #f1f1f1; /* Light text for readability */
+    line-height: 1.6;
+}
+
+/* Navigation bar styles */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #111;
+    z-index: 10; /* Ensure navbar stays on top */
+    padding: 15px 0;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    margin: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin-right: 30px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #aaa; /* Subtle link color */
+    font-size: 1.2rem;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #f1c40f; /* Golden hover effect */
+}
+
+/* Hero Section */
+img {
+    max-width: 100%; /* Responsive images */
+}
+
+.hero {
+    background-color: #111;
+    color: #f1f1f1;
+    /* height: 80vh; /* Good size */
+    display: grid;
+    grid-template-areas: "hero";
+    place-items: center left ;
+    padding: 20px;
+    margin-top: 80px; /* Ensure space for navbar */
+}
+
+.hero > * {
+    grid-area: hero;
+}
+
+.hero h1 {
+    font-size: 4rem; /* Bigger font for hero */
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    line-height: 60px;
+    padding-left: 50px;
+}
+
+
+
+.big-word {
+    font-size: 4rem; /* Larger size for emphasis */
+    font-weight: bold;
+    letter-spacing: 6px; /* More spacing for big words */
+    color: #f1c40f; /* Golden color to stand out */
+}
+ 
+.small-word {
+    font-size: 2rem; /* Larger size for emphasis */
+    font-weight: bold;
+    letter-spacing: 6px; /* More spacing for big words */
+    color: #f1c40f; /* Golden color to stand out */
+    line-height: 1px;
+}
+
+/* effect for a glowing text */
+.hero h1 span {
+    text-shadow: 0 0 8px rgba(241, 196, 15, 0.8); /* Glowing effect on big words */
+}
+
+/* Card Styles */
+.card { 
+    background-color: #333; /* Darker background for contrast */
+    border: 2px solid #444; /* lighter border for contrast */
+    border-radius: 8px; /* Rounded corners */
+    padding: 20px; /* Add space inside card */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Light shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth hover effect */
+    cursor: pointer; /* Change cursor to pointer on hover */
+    flex: 1 1 calc(33.33% - 20px); /* 3 cards side by side */
+    margin: 10px;
+}
+
+.card:hover {
+    transform: scale(1.05); /* Slightly enlarge card */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.5); /* Intense shadow on hover */
+}
+
+/* Main content area styles */
+.main-content { 
+    display: flex; /* Arrange cards in a row */
+    flex-wrap: wrap; /* Allow cards to wrap to next line */
+    justify-content: space-between; /* Evenly distribute cards */
+    margin-top: 40px; /* Space between hero and cards */
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    margin-top: 60px;
+    background-color: #111;
+    color: #f1f1f1;
+    padding: 20px 0;
+}
+
+footer p {
+    font-size: 1rem;
+}
