@@ -107,7 +107,7 @@ img {
 
 .hero {
     height: 100vh;
-    background-image: url('Hero-img.jpg'); 
+    background-image: url('img/Hero-img.jpg'); 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -243,6 +243,7 @@ footer::before {
     animation: slideLine 4s linear infinite, pulseEffect 2s ease-in-out infinite;
 }
 
+
 @keyframes pulseEffect {
     0% { opacity: 1; }
     50% { opacity: 0.7; }
@@ -363,6 +364,39 @@ footer p {
     color: #f1f1f1;
 }
 
+.graphic-hero {
+    height: 80vh;
+    background-image: url('about-background.jpg'); /* Background image| Ill use a dark and mysterius one*/
+    background-size: cover;
+    background-attachment: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: #f1f1f1;
+    position: relative;
+}
+
+.graphic-hero::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0; width: 100%; height: 100%;
+    background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: 1; /* Ensures it stays behind the text */
+}
+
+.graphic-hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.graphic-hero h1 {
+    font-size: 4rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
+}
 
 /* Responsive styles */
 @media (max-width: 768px) {
