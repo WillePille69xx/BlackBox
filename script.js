@@ -47,3 +47,21 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(el);  // Start observing each element
     });
 });
+
+document.addEventListener("DOMContentLoaded", function () {
+    const quoteSection = document.querySelector(".about-quote");
+
+    if (quoteSection) {
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    quoteSection.classList.add("quote-visible");
+                    observer.unobserve(quoteSection); // Stop observing after animation
+                }
+            });
+        }, { threshold: 0.2 });
+
+        observer.observe(quoteSection);
+    }
+});
+
