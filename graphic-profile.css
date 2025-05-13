@@ -25,6 +25,10 @@ body {
     background-color: #ddd; /* Lighter navbar background */
 }
 
+.light-mode nav ul li a {
+    color: #333;
+}
+
 .light-mode .card {
     background-color: #fff; /* Lighter card background */
     color: #000; /* Dark text for contrast */
@@ -77,11 +81,11 @@ nav {
     left: 0;
     width: 100%;
     background: rgba(17, 17, 17, 0.8);
-    padding: 15px 0;
-    backdrop-filter: blur(5px);
-    z-index: 9999;
-    transition: background 0.3s ease-in-out;
-}
+    padding: 15px 0; 
+    backdrop-filter: blur(5px); 
+    z-index: 9999; 
+    transition: background 0.3s ease-in-out; 
+} 
 
 nav ul {
     list-style-type: none;
