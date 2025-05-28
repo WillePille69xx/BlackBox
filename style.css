@@ -33,10 +33,7 @@ body {
     background: rgba(255, 255, 255, 0.5); /* Light overlay */
 }
 
-.light-mode .hero h1{
-    -webkit-text-stroke: #333;
-    -webkit-text-stroke-width: 1px;
-}
+
 
 .light-mode section {
     background: rgba(255, 255, 255, 0.5);
@@ -201,9 +198,9 @@ img {
 
 /* cta button styles */
 @keyframes pulse {
-    0% { transform: scale(1); box-shadow: 0 0 10px rgba(241, 196, 15, 05);}
+    0% { transform: scale(1); box-shadow: 0 0 10px rgba(241, 196, 15, 0.5);}
     50% { transform: scale(1.05); box-shadow: 0 0 20px rgba(241, 196, 15, 0.8);}
-    100% { transform: scale(1); box-shadow: 0 0 10px rgba(241, 196, 15, 05);}
+    100% { transform: scale(1); box-shadow: 0 0 10px rgba(241, 196, 15, 0.5);}
 }
 
 .cta-button { 
@@ -618,7 +615,7 @@ footer p {
     cursor: pointer;
     padding: 35px;
     width: 100%;
-    height: cover;
+    height: auto;
     border: 1px solid #444;
     border: none;
     text-align: left;
