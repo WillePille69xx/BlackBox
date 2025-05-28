@@ -649,3 +649,11 @@ body {
     letter-spacing: 3px;
     text-shadow: 0 0 10px rgba(241, 196, 15, 0.8);
 }
+
+.visually-hidden {
+  position: absolute;
+  left: -9999px;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+}
